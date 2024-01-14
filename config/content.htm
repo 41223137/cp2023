@@ -1242,6 +1242,7 @@ int main() {
 <p><img alt="" height="400" src="/images/belgium_flag.png" width="600"/></p>
 <p></p>
 <h1>ANSIC</h1>
+<p>作業練習</p>
 <h2>1.</h2>
 <pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
 
@@ -1325,7 +1326,8 @@ int main()
 
     return(0);
 }</pre>
-<br/><img alt="" height="171" src="/images/螢幕擷取畫面 2024-01-14 095223.png" width="421"/><br/>5.
+<p><br/><br/><br/><br/><img alt="" height="171" src="/images/螢幕擷取畫面 2024-01-14 095223.png" width="421"/><br/><br/></p>
+<h2>5.</h2>
 <pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt; 
 
 /* 
@@ -1353,8 +1355,121 @@ int main() {
     return(0);
 }</pre>
 <p><img alt="" height="193" src="/images/螢幕擷取畫面 2024-01-14 095706.png" width="602"/></p>
-<p></p>
-<p></p>
+<h2>6.</h2>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+
+int main() {
+   int radius;      /* Variable to store the radius of the circle */
+   float area, perimeter;    /* Variables to store the area and perimeter of the circle */
+   radius = 9.15;      /* Assigning a value to the radius */
+
+   /* Calculating the perimeter of the circle */
+   perimeter = 2 * 3.14 * radius;
+   printf("Perimeter of the Circle = %f inches\n", perimeter);
+
+   /* Calculating the area of the circle */
+   area = 3.14 * radius * radius;
+   printf("Area of the Circle = %f square inches\n", area);
+
+   return(0);
+}</pre>
+<p><img alt="" height="185" src="/images/螢幕擷取畫面 2024-01-14 100950.png" width="520"/>7.</p>
+<h2>7.</h2>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+ 
+int main()
+{
+    int days, years, weeks;
+ 
+    days = 198964; // Total number of days
+ 
+    // Converts days to years, weeks and days
+    years = days/365; // Calculate years
+    weeks = (days % 365)/7; // Calculate weeks
+    days = days - ((years*365) + (weeks*7)); // Calculate remaining days
+ 
+    // Print the results
+    printf("Years: %d\n", years);
+    printf("Weeks: %d\n", weeks);
+    printf("Days: %d \n", days);
+ 
+    return 0;
+}</pre>
+<p><img alt="" height="220" src="/images/螢幕擷取畫面 2024-01-14 101414.png" width="425"/></p>
+<h2>8.</h2>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+int main() {
+    // Define an enumeration type 'week'
+    enum week {Sun, Mon, Tue, Wed, Thu, Fri, Sat};
+ 
+    // Print the values of the days using the enumeration constants
+    printf("Sun = %d", Sun);
+    printf("\nMon = %d", Mon);
+    printf("\nTue = %d", Tue);
+    printf("\nWed = %d", Wed);
+    printf("\nThu = %d", Thu);
+    printf("\nFri = %d", Fri);
+    printf("\nSat = %d", Sat);
+ 
+    return 0;
+}</pre>
+<p><img alt="" height="300" src="/images/螢幕擷取畫面 2024-01-14 101709.png" width="426"/></p>
+<h2>9.</h2>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+int main() {
+    int i, j, flag, ip = 0;
+
+    // Print a message indicating the purpose of the program
+    printf("The prime numbers between 1 and 199 are:\n");
+
+    // Loop to check prime numbers from 2 to 198
+    for (i = 5; i &lt; 599; i++) {
+        flag = 1;
+
+        // Loop to check if i is divisible by any number other than 1 and itself
+        for (j = 2; j &lt;= i / 2 &amp;&amp; flag == 1; j++) {
+            if (i % j == 0) {
+                flag = 0;
+            }
+        }
+
+        // If i is prime, print it
+        if (flag == 1) {
+            printf("%5d ", i);
+            ip++;
+
+            // Print a newline character after every 10 prime numbers
+            if (ip % 10 == 0) {
+                printf("\n");
+            }
+        }
+    }
+
+    printf("\n");
+
+    return 0;
+}</pre>
+<p><img alt="" height="353" src="/images/螢幕擷取畫面 2024-01-14 102034.png" width="657"/></p>
+<h2>10.</h2>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+#define N 10
+
+int main() {
+  char chr;
+  printf("\n");
+
+  // Loop through ASCII values from 65 ('A') to 122 ('z')
+  for (chr = 64; chr &lt;= 117; chr = chr + 1) {
+    // Exclude characters between 'Z' and 'a'
+    if (chr &gt; 87 &amp;&amp; chr &lt; 97)
+      continue;
+
+    printf("[%2d-%c] ", chr, chr);
+  }
+
+  return 0;
+}</pre>
+<p><img alt="" height="237" src="/images/螢幕擷取畫面 2024-01-14 102523.png" width="654"/></p>
 <h1>Brython</h1>
 <p><a href="https://en.wikipedia.org/wiki/Python_(programming_language)">https://en.wikipedia.org/wiki/Python_(programming_language)</a></p>
 <h4>Examples:</h4>

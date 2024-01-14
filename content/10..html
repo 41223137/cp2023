@@ -142,25 +142,27 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">3. << <a href='3..html'>Previous</a> <a href='5..html'>Next</a> >> 5.<br /><h1>4.</h1>
+    <div id="tipue_search_content">9. << <a href='9..html'>Previous</a> <a href='Brython.html'>Next</a> >> Brython<br /><h1>10.</h1>
 <pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+#define N 10
 
-int main() 
-{
-    // Declare and initialize character variables
-    char char1 = 'T';
-    char char2 = 'R';
-    char char3 = 'A';
+int main() {
+  char chr;
+  printf("\n");
 
-    // Print the original and reversed characters
-    printf("The reverse of %c%c%c is %c%c%c\n",
-        char1, char2, char3,
-        char3, char2, char1);
+  // Loop through ASCII values from 65 ('A') to 122 ('z')
+  for (chr = 64; chr &lt;= 117; chr = chr + 1) {
+    // Exclude characters between 'Z' and 'a'
+    if (chr &gt; 87 &amp;&amp; chr &lt; 97)
+      continue;
 
-    return(0);
+    printf("[%2d-%c] ", chr, chr);
+  }
+
+  return 0;
 }</pre>
-<p><br/><br/><br/><br/><img alt="" height="171" src="./../images/螢幕擷取畫面 2024-01-14 095223.png" width="421"/><br/><br/></p>
-<br />3. << <a href='3..html'>Previous</a> <a href='5..html'>Next</a> >> 5.</div>
+<p><img alt="" height="237" src="./../images/螢幕擷取畫面 2024-01-14 102523.png" width="654"/></p>
+<br />9. << <a href='9..html'>Previous</a> <a href='Brython.html'>Next</a> >> Brython</div>
         
     <!-- footer -->
       <div class="container">
