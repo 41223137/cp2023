@@ -142,67 +142,54 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">作業 << <a href='作業.html'>Previous</a> <a href='W5.html'>Next</a> >> W5<br /><h1>W2</h1>
-<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">// 包含標準輸出入程式庫的標頭文件
-#include &lt;stdio.h&gt;
- 
-// 主函式
-int main() {
-    // Open a file to write displacement and velocity data
-    FILE *outputFile = fopen("motion_data.txt", "w");
-    if (!outputFile) {
-        fprintf(stderr, "Failed to create data file.\n");
-        return 1;
-    }
- 
-    // Simulate motion for 10 seconds and calculate displacement and velocity, while writing data to the file
-    double x = 0.2;  // Initial displacement
-    double v = 0.0;  // Initial velocity
-    double dt = 0.01; // Time step
-    double t = 0.0;  // Time
- 
-    while (t &lt;= 10.0) {
-        double acceleration = (-10.0 * x - 0.5 * v) / 1.0; // Modified system parameters here
-        v += acceleration * dt;
-        x += v * dt;
- 
-        fprintf(outputFile, "%lf %lf %lf\n", t, x, v);
- 
-        t += dt;
-    }
- 
-    // Close the data file
-    fclose(outputFile);
- 
-    // Start a Gnuplot process using popen
-    FILE *gnuplotPipe = popen("gnuplot -persistent", "w");
-    if (!gnuplotPipe) {
-        fprintf(stderr, "Failed to start Gnuplot.\n");
-        return 1;
-    }
- 
-    // Use Gnuplot plotting commands, specify font and output as PNG
-    fprintf(gnuplotPipe, "set terminal pngcairo enhanced font 'default,10' size 800,400\n");
-    fprintf(gnuplotPipe, "set output './../images/motion_plot.png'\n");
-    fprintf(gnuplotPipe, "set title 'Displacement and Velocity vs. Time'\n");
-    fprintf(gnuplotPipe, "set xlabel 'Time (s)'\n");
-    fprintf(gnuplotPipe, "set ylabel 'Displacement (m)'\n");
-    fprintf(gnuplotPipe, "plot 'motion_data.txt' using 1:2 with lines lw 2 title 'Displacement', \
-                             'motion_data.txt' using 1:3 with lines lw 2 title 'Velocity'\n");
- 
-    // Close the Gnuplot process
-    fprintf(gnuplotPipe, "exit\n");
-    pclose(gnuplotPipe);
- 
-    return 0;
+    <div id="tipue_search_content">3. << <a href='3..html'>Previous</a> <a href='Brython.html'>Next</a> >> Brython<br /><h1>4.</h1>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+
+int main() 
+{
+    // Declare and initialize character variables
+    char char1 = 'T';
+    char char2 = 'R';
+    char char3 = 'A';
+
+    // Print the original and reversed characters
+    printf("The reverse of %c%c%c is %c%c%c\n",
+        char1, char2, char3,
+        char3, char2, char1);
+
+    return(0);
 }</pre>
-<p>在 Shell 工具頁面:</p>
-<p>cd downloads</p>
-<p>cc euler_gnuplot_msd_ex1.c</p>
-<p>經過編譯與連結後取得 a.out</p>
-<p>然後利用 ./a.out 執行, 就可以在 images 目錄下得到 mass-spring-damper 微分運動方程式採 Euler's Method 模擬數值分析結果, motion_plot.png:</p>
-<p><img alt="" height="400" src="./../images/motion_plot.png" width="800"/></p>
-<br />作業 << <a href='作業.html'>Previous</a> <a href='W5.html'>Next</a> >> W5</div>
+<br/><img alt="" height="171" src="./../images/螢幕擷取畫面 2024-01-14 095223.png" width="421"/><br/>5.
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt; 
+
+/* 
+   Variables to store the width and height of a rectangle in inches 
+*/
+int width;          
+int height;         
+
+int area;           /* Variable to store the area of the rectangle */
+int perimeter;      /* Variable to store the perimeter of the rectangle */
+
+int main() {
+    /* Assigning values to height and width */
+    height = 89;
+    width = 64;
+
+    /* Calculating the perimeter of the rectangle */
+    perimeter = 2*(height + width);
+    printf("Perimeter of the rectangle = %d inches\n", perimeter);
+
+    /* Calculating the area of the rectangle */
+    area = height * width;
+    printf("Area of the rectangle = %d square inches\n", area);
+
+    return(0);
+}</pre>
+<p><img alt="" height="193" src="./../images/螢幕擷取畫面 2024-01-14 095706.png" width="602"/></p>
+<p></p>
+<p></p>
+<br />3. << <a href='3..html'>Previous</a> <a href='Brython.html'>Next</a> >> Brython</div>
         
     <!-- footer -->
       <div class="container">
